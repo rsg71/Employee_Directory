@@ -1,26 +1,63 @@
 [
   {
-    "id": 1,
-    "name": "SpongeBob",
-    "image":
-      "https://vignette.wikia.nocookie.net/spongebobgalaxy/images/0/07/SpongeBob_SquarePants.png/revision/latest?cb=20171228024014",
-    "occupation": "Fry Cook",
-    "location": "A Pineapple Under the Sea"
+    "name": "Darcy Kelly",
+    "phone": "925-0799-95",
+    "email": "d.kelley@randatmail.com",
+    "DoB": "4-8-1995"
   },
   {
-    "id": 2,
-    "name": "Mr. Krabs",
-    "image":
-      "https://vignette3.wikia.nocookie.net/vsbattles/images/8/80/Mr._Krabs.png/revision/latest?cb=20150919162131",
-    "occupation": "Restaurant Owner",
-    "location": "A Giant Anchor"
+    "name": "Fenton Turner",
+    "phone": "850-9764-43",
+    "email": "f.turner@randatmail.com",
+    "DoB": "5-8-2000"
   },
   {
-    "id": 3,
-    "name": "Squidward",
-    "image":
-      "https://vignette2.wikia.nocookie.net/fictionalcharacters/images/a/ac/Squidward.png/revision/latest?cb=20131121012626",
-    "occupation": "Cashier",
-    "location": "An Easter Island Head"
+    "name": "Ashton Mitchell",
+    "phone": "868-8118-58",
+    "email": "a.mitchell@randatmail.com",
+    "DoB": "4-8-1970"
+  },
+  {
+    "name": "Kristian Hamilton",
+    "phone": "066-8476-03",
+    "email": "k.hamilton@randatmail.com",
+    "DoB": "9-12-1946"
+  },
+  {
+    "name": "Tony Carter",
+    "phone": "054-9907-90",
+    "email": "t.carter@randatmail.com",
+    "DoB": "4-8-1985"
+  },
+  {
+    "name": "Alexia Cameron",
+    "phone": "732-6513-41",
+    "email": "a.cameron@randatmail.com",
+    "DoB": "4-8-1967"
+  },
+  {
+    "name": "Sydney Hunt",
+    "phone": "151-1652-31",
+    "email": "s.hunt@randatmail.com",
+    "DoB": "4-8-1974"
+  },
+  {
+    "name": "Mike Murray",
+    "phone": "616-8232-10",
+    "email": "m.murray@randatmail.com",
+    "DoB": "4-8-1938"
+  },
+  {
+    "name": "Natalie Grey",
+    "phone": "407-5248-97",
+    "email": "n.gray@randatmail.com",
+    "DoB": "4-8-1993"
+  },
+  {
+    "name": "Adelaide Russell",
+    "phone": "846-2965-01",
+    "email": "a.russell@randatmail.com",
+    "DoB": "4-8-1966"
   }
+
 ]
