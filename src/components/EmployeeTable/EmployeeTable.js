@@ -14,7 +14,9 @@ function EmployeeTable() {
                     <th>Email</th>
                     <th>DOB</th>
                 </tr>
-                <tr>
+                
+
+                {/* <tr>
                     <td>Jimmy Miller</td>
                     <td>(750) 983-7329</td>
                     <td>Jimmy3@gmail.com</td>
@@ -31,7 +33,7 @@ function EmployeeTable() {
                     <td>(898) 780-3863</td>
                     <td>raines@aol.com</td>
                     <td>12/2/2000</td>
-                </tr>
+                </tr> */}
             </table>
         </>
     )
