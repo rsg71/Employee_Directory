@@ -4,9 +4,10 @@ import Header from "./components/Header/Header"
 import EmployeeTable from "./components/EmployeeTable/EmployeeTable"
 import employees from "./employees.json"
 // import TableRow from "./components/TableRow/TableRow"
-
+import style from "./appstyle.css"
 
 //practice using filter on an array. Why isn't this working for the employees.json? Answer: because you had item.includes instead of item.name.includes
+
 
 
 class App extends React.Component {
@@ -33,14 +34,16 @@ class App extends React.Component {
     const searchTerm = this.state.search;
     console.log(searchTerm)
 
-
     const filteredEmp = employees.filter(item => item.name.includes(searchTerm))
     console.log(filteredEmp)
 
 
     //Sort Order
+    const filteredEmployeeNames = filteredEmp.map(item => item.name)
 
-
+    const sortedEmp = filteredEmployeeNames.sort();
+    console.log('sorted coming up')
+    console.log("sorted: ", sortedEmp)
 
 
 
@@ -65,18 +68,71 @@ class App extends React.Component {
     });
   };
 
+
+
+  sortName = event => {
+    //sort order toggle
+    const sortedEmployees = employees.sort((a, b) => {
+
+
+      const aFirstName = a.name.split(" ")[0]
+
+      const bFirstName = b.name.split(" ")[0]
+      if (this.state.sortOrder === "ASC") {
+        if (aFirstName < bFirstName) {
+          return -1;
+        } else if (aFirstName > bFirstName) {
+          return 1;
+        } else {
+          return 0
+        }
+      } else {
+        if (aFirstName > bFirstName) {
+          return -1;
+        } else if (aFirstName < bFirstName) {
+          return 1;
+        } else {
+          return 0
+        }
+      }
+
+
+
+
+    })
+    if(this.state.sortOrder === "ASC") {
+      this.setState({sortOrder: "DSC"})
+    } else if (this.state.sortOrder === "DSC") {
+      this.setState({sortOrder: "ASC"})
+    }
+    this.setState({ employees: sortedEmployees })
+
+  }
+
+
+
+
   render() {
-    
+
+    //duplicate of the filtered names based on search ****why does this go here?
     const searchTerm = this.state.search;
     console.log(searchTerm)
 
 
     const filteredEmp = employees.filter(item => item.name.includes(searchTerm))
-    console.log(filteredEmp) 
+    console.log(filteredEmp)
+
+    //duplicate of the filtered names based on Sort Order ****why does this go here?
+    const filteredEmployeeNames = filteredEmp.map(item => item.name)
+
+    const sortedEmp = filteredEmployeeNames.sort();
+    console.log('sorted coming up')
+    console.log("sorted: ", sortedEmp)
 
     return (
       <div>
         <Header></Header>
+        <br></br>
         <form className="form">
           <input
             value={this.state.search}
@@ -87,22 +143,25 @@ class App extends React.Component {
           />
           <button onClick={this.handleFormSubmit}>Submit</button>
         </form>
-     
-        <table>
+        <br></br>
+        <table id="employeeTable" style={style}>
           <tr>
-            <th>Name</th>
+            <th>Name
+            <button onClick={this.sortName}>
+                Sort
+              </button></th>
             <th>Phone</th>
             <th>Email</th>
             <th>DOB</th>
           </tr>
-            {filteredEmp.map(user => 
+          {filteredEmp.map(user =>
             <tr>
               <td>{user.name}</td>
               <td>{user.phone}</td>
               <td>{user.email}</td>
               <td>{user.DoB}</td>
             </tr>
-            )}
+          )}
 
         </table>
 
