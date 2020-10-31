@@ -2,7 +2,7 @@ import React from "react"
 import Header from "./components/Header/Header"
 // import Main from "./components/Main/Main"
 import EmployeeTable from "./components/EmployeeTable/EmployeeTable"
-import employees from "./employees.json"
+import employees from "./mockData.json"
 // import TableRow from "./components/TableRow/TableRow"
 import style from "./appstyle.css"
 
@@ -147,6 +147,7 @@ class App extends React.Component {
         <table id="employeeTable" style={style}>
           <tr>
             <th>Name
+              {" "}
             <button onClick={this.sortName}>
                 Sort
               </button></th>
